@@ -1,24 +1,24 @@
 {
-  "name": "zotero-plugin-template",
+  "name": "zotero-localapi-plus",
   "type": "module",
-  "version": "3.1.0",
-  "description": "Zotero Plugin Template",
+  "version": "0.0.0",
+  "description": "More features for Zotero Local API",
   "config": {
-    "addonName": "Zotero Plugin Template",
-    "addonID": "addontemplate@euclpts.com",
-    "addonRef": "addontemplate",
-    "addonInstance": "AddonTemplate",
-    "prefsPrefix": "extensions.zotero.addontemplate"
+    "addonName": "Zotero Local API Plus",
+    "addonID": "zotero-localapi-plus@gokokruri007.com",
+    "addonRef": "zotero-localapi-plus",
+    "addonInstance": "ZoteroLocalAPIPlus",
+    "prefsPrefix": "extensions.zotero.zotero-localapi-plus"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingwind/zotero-plugin-template.git"
+    "url": "git+https://github.com/GOKORURI007/zotero-localapi-plus.git"
   },
-  "author": "windingwind",
+  "author": "GOKORURI007",
   "bugs": {
-    "url": "https://github.com/windingwind/zotero-plugin-template/issues"
+    "url": "https://github.com/GOKORURI007/zotero-localapi-plus/issues"
   },
-  "homepage": "https://github.com/windingwind/zotero-plugin-template#readme",
+  "homepage": "https://github.com/GOKORURI007/zotero-localapi-plus#readme",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "zotero-plugin serve",
