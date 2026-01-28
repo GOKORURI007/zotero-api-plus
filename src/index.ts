@@ -15,6 +15,7 @@ const basicTool = new BasicTool();
  *
  * 这种设计用来防止在多次加载时重复初始化插件
  */
+// @ts-expect-error - Plugins instance not typed.
 if (!basicTool.getGlobal("Zotero")[config.addonInstance]) {
   // 创建插件主实例，所有业务逻辑都由 Addon 类处理
   _globalThis.addon = new Addon();
@@ -28,6 +29,7 @@ if (!basicTool.getGlobal("Zotero")[config.addonInstance]) {
 
   // 将插件实例注册到 Zotero 全局对象中
   // 这使得插件实例在整个应用生命周期内持久化和可访问
+  // @ts-expect-error - Plugins instance not typed.
   Zotero[config.addonInstance] = addon;
 }
 

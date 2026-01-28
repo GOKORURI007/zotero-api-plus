@@ -1,24 +1,24 @@
 {
-  "name": "zotero-localapi-plus",
+  "name": "zotero-api-plus",
   "type": "module",
   "version": "0.0.0",
   "description": "More features for Zotero Local API",
   "config": {
-    "addonName": "Zotero Local API Plus",
-    "addonID": "zotero-localapi-plus@gokokruri007.com",
-    "addonRef": "zotero-localapi-plus",
-    "addonInstance": "ZoteroLocalAPIPlus",
-    "prefsPrefix": "extensions.zotero.zotero-localapi-plus"
+    "addonName": "Zotero API Plus",
+    "addonID": "zotero-api-plus@gokokruri007.com",
+    "addonRef": "zotero-api-plus",
+    "addonInstance": "ZoteroAPIPlus",
+    "prefsPrefix": "extensions.zotero.zotero-api-plus"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GOKORURI007/zotero-localapi-plus.git"
+    "url": "git+https://github.com/GOKORURI007/zotero-api-plus.git"
   },
   "author": "GOKORURI007",
   "bugs": {
-    "url": "https://github.com/GOKORURI007/zotero-localapi-plus/issues"
+    "url": "https://github.com/GOKORURI007/zotero-api-plus/issues"
   },
-  "homepage": "https://github.com/GOKORURI007/zotero-localapi-plus#readme",
+  "homepage": "https://github.com/GOKORURI007/zotero-api-plus#readme",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "zotero-plugin serve",
