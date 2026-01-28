@@ -58,6 +58,29 @@ Content-Type: application/json
 }
 ```
 
+### 获取当前选中的集合
+
+```
+GET /api/plus/selected-collection
+```
+
+返回 Zotero 中当前选中的集合信息。
+
+#### 响应
+
+```json
+{
+  "name": "我的集合",
+  "key": "ABC123"
+}
+```
+
+#### 错误响应
+
+```
+No Collection selected.
+```
+
 ## 安装
 
 1. 从 [GitHub Releases](https://github.com/GOKORURI007/zotero-api-plus/releases) 页面下载最新版本。

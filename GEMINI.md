@@ -80,6 +80,7 @@
 - `addon.ts`: 插件主逻辑的 TypeScript 实现，包含 API 端点定义。
   - `Plus` 端点: 健康检查端点
   - `AddItemEndpoint`: 通过标识符添加项目的端点
+  - `GetSelectedCollectionEndpoint`: 获取当前选中集合的端点
 - `hooks.ts`: 包含钩子（hooks）相关的逻辑，处理插件启动和窗口加载等事件。
 - `index.ts`: 项目的入口文件，初始化插件实例。
 

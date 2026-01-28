@@ -58,6 +58,29 @@ Adds items to Zotero using identifiers like DOI, ISBN, PMID, etc.
 }
 ```
 
+### Get Selected Collection
+
+```
+GET /api/plus/selected-collection
+```
+
+Returns information about the currently selected collection in Zotero.
+
+#### Response
+
+```json
+{
+  "name": "My Collection",
+  "key": "ABC123"
+}
+```
+
+#### Error Response
+
+```
+No Collection selected.
+```
+
 ## Installation
 
 1. Download the latest release from the [GitHub Releases](https://github.com/GOKORURI007/zotero-api-plus/releases) page.
