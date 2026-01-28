@@ -16,3 +16,21 @@ declare const rootURI: string;
 declare const addon: import("../src/addon").default;
 
 declare const __env__: "production" | "development";
+
+declare namespace Zotero {
+  namespace Server {
+    namespace LocalAPI {
+      class Schema {
+        supportedMethods?: string[];
+        supportedDataTypes?: string[];
+        permitBookmarklet?: boolean;
+        run(request: any): Promise<[number, string, string]>;
+      }
+      let Plus: new () => Schema;
+      let AddItemEndpoint: new () => Schema;
+    }
+    const Endpoints: {
+      [key: string]: any;
+    };
+  }
+}
