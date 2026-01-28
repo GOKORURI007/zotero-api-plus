@@ -1,6 +1,6 @@
 # 项目结构概览
 
-`zotero-localapi-plus` 项目是一个 Zotero 插件，主要使用 TypeScript 和 JavaScript 开发。其结构清晰，分为插件核心文件、源代码、文档、测试以及各种配置文件。
+`Zotero API Plus` 是一个 Zotero 插件，主要使用 TypeScript 和 JavaScript 开发，为 Zotero 的本地 API 扩展了额外功能。其结构清晰，分为插件核心文件、源代码、文档、测试以及各种配置文件。
 
 ## 顶层文件
 
@@ -72,17 +72,16 @@
 
 项目的 TypeScript 源代码目录。
 
-- `modules/`: 存放独立的模块或功能单元。
-  - `examples.ts`: 示例代码或模块。
-  - `preferenceScript.ts`: 处理偏好设置相关的脚本逻辑。
 - `utils/`: 存放通用的工具函数或辅助代码。
   - `locale.ts`: 本地化相关的工具函数。
   - `prefs.ts`: 偏好设置相关的工具函数。
   - `window.ts`: 窗口操作相关的工具函数。
   - `ztoolkit.ts`: Zotero 工具包相关的函数。
-- `addon.ts`: 插件主逻辑的 TypeScript 实现。
-- `hooks.ts`: 包含钩子（hooks）相关的逻辑。
-- `index.ts`: 项目的入口文件。
+- `addon.ts`: 插件主逻辑的 TypeScript 实现，包含 API 端点定义。
+  - `Plus` 端点: 健康检查端点
+  - `AddItemEndpoint`: 通过标识符添加项目的端点
+- `hooks.ts`: 包含钩子（hooks）相关的逻辑，处理插件启动和窗口加载等事件。
+- `index.ts`: 项目的入口文件，初始化插件实例。
 
 ### `test/`
 
