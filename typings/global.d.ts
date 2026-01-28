@@ -28,6 +28,7 @@ declare namespace Zotero {
       }
       let Plus: new () => Schema;
       let AddItemEndpoint: new () => Schema;
+      let GetSelectedCollectionEndpoint: new () => Schema;
     }
     const Endpoints: {
       [key: string]: any;

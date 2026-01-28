@@ -109,6 +109,40 @@ Zotero.Server.LocalAPI.AddItemEndpoint = class extends (
   }
 };
 
+// 添加项目端点 - 获取当前 Collection 列表
+Zotero.Server.LocalAPI.GetSelectedCollectionEndpoint = class extends (
+  Zotero.Server.LocalAPI.Schema
+) {
+  supportedMethods = ["GET"];
+
+  async run(_: any): Promise<[number, string, string]> {
+    try {
+      // 获取当前活动的窗口面板
+      const collection = Zotero.getActiveZoteroPane().getSelectedCollection();
+
+      if (collection) {
+        ztoolkit.log("当前 Collection 名称:", collection.name);
+        ztoolkit.log("当前 Collection Key:", collection.key);
+        return [
+          200,
+          "application/json",
+          JSON.stringify({
+            name: collection.name,
+            key: collection.key,
+          }),
+        ];
+      } else {
+        // 如果用户选中了“我的出版物”或“未分类条目”，getSelectedCollection 会返回 null
+        ztoolkit.log("当前未选中特定 Collection (可能在根目录或特殊分类下)");
+        return [500, "text/plain", "No Collection selected."];
+      }
+    } catch (e: any) {
+      // 捕获并返回服务器错误
+      return [500, "text/plain", "Internal Server Error: " + e.message];
+    }
+  }
+};
+
 // 插件主类 - 管理插件的生命周期和数据
 class Addon {
   public data: {
@@ -150,6 +184,8 @@ class Addon {
     Zotero.Server.Endpoints["/api/plus/add-item-by-id"] =
       Zotero.Server.LocalAPI.AddItemEndpoint;
     Zotero.Server.Endpoints["/api/plus"] = Zotero.Server.LocalAPI.Plus;
+    Zotero.Server.Endpoints["/api/plus/selected-collection"] =
+      Zotero.Server.LocalAPI.GetSelectedCollectionEndpoint;
     ztoolkit.log("Registering Local API Plus endpoint");
     ztoolkit.log(Zotero.Server.LocalAPI.Plus);
   }
