@@ -1,4 +1,5 @@
 # Zotero API Plus
+
 [![zotero target version](https://img.shields.io/badge/Zotero-8-green?style=flat-square&logo=zotero&logoColor=CC2936)](https://www.zotero.org)
 [![License: AGPL-3.0-or-later](https://img.shields.io/github/license/GOKORURI007/zotero-api-plus)](https://github.com/GOKORURI007/zotero-api-plus/blob/main/LICENSE)
 
@@ -16,6 +17,7 @@ A Zotero plugin that extends Zotero's local API with additional functionality.
 ## API Endpoints
 
 ### Health Check
+
 ```
 GET /api/plus
 ```
@@ -23,11 +25,13 @@ GET /api/plus
 Returns a simple message indicating the API is running.
 
 #### Response
+
 ```
 Zotero Local API Plus is running.
 ```
 
 ### Add Item by Identifier
+
 ```
 POST /api/plus/add-item-by-id
 Content-Type: application/json
@@ -36,14 +40,16 @@ Content-Type: application/json
 Adds items to Zotero using identifiers like DOI, ISBN, PMID, etc.
 
 #### Request Body
+
 ```json
 {
-  "identifier": "10.1038/nature12373",  // Required: DOI, ISBN, PMID, etc.
-  "collectionKey": "ABC123"  // Optional: Collection key to add items to
+  "identifier": "10.1038/nature12373", // Required: DOI, ISBN, PMID, etc.
+  "collectionKey": "ABC123" // Optional: Collection key to add items to
 }
 ```
 
 #### Response
+
 ```json
 {
   "status": "success",

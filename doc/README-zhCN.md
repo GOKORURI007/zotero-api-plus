@@ -17,6 +17,7 @@
 ## API 端点
 
 ### 健康检查
+
 ```
 GET /api/plus
 ```
@@ -24,11 +25,13 @@ GET /api/plus
 返回一个简单消息，指示 API 正在运行。
 
 #### 响应
+
 ```
 Zotero Local API Plus is running.
 ```
 
 ### 通过标识符添加项目
+
 ```
 POST /api/plus/add-item-by-id
 Content-Type: application/json
@@ -37,14 +40,16 @@ Content-Type: application/json
 使用 DOI、ISBN、PMID 等标识符将项目添加到 Zotero。
 
 #### 请求体
+
 ```json
 {
-  "identifier": "10.1038/nature12373",  // 必填：DOI、ISBN、PMID 等
-  "collectionKey": "ABC123"  // 可选：要添加项目的集合键
+  "identifier": "10.1038/nature12373", // 必填：DOI、ISBN、PMID 等
+  "collectionKey": "ABC123" // 可选：要添加项目的集合键
 }
 ```
 
 #### 响应
+
 ```json
 {
   "status": "success",
