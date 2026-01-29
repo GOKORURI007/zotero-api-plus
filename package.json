@@ -1,7 +1,7 @@
 {
   "name": "zotero-api-plus",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "More features for Zotero Local API",
   "config": {
     "addonName": "Zotero API Plus",
